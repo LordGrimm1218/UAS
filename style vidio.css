@@ -1,0 +1,229 @@
+/* RESET & FONTS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #dbeafe);
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: url('foto-kota-makassar.jpeg') center center/cover no-repeat;
+  filter: blur(7px) brightness(0.7);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+/* HEADER */
+.header {
+  background-color: #1e293b;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* NAVIGATION */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #ffffff;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 2rem;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* VIDEO GALLERY */
+.gallery-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+.section-title {
+  color: #ffffff;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item iframe {
+  width: 100%;
+  height: 320px;
+  display: block;
+}
+
+.gallery-caption {
+  padding: 1rem;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* FEATURE CARD */
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin: 0.75rem 1rem 0.25rem;
+  color: #1e293b;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #475569;
+  padding: 0 1rem 1rem;
+}
+
+.feature-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.feature-card a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1e293b;
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.social-link {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-image {
+    height: 200px;
+  }
+
+  .gallery-item iframe {
+    height: 220px;
+  }
+}
