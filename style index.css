@@ -218,3 +218,9 @@ body::before {
 .social-link:hover {
   color: #c0392b;
 }
+@media (max-width: 700px) {
+  .header-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem 0.5rem;
+  }
