@@ -291,29 +291,3 @@ body::before {
 .social-link:hover {
   color: #c0392b;
 }
-
-/* Responsive */
-@media (max-width: 1100px) {
-  .header-container,
-  .footer-content,
-  .news-grid {
-    max-width: 98vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .news-grid {
-    gap: 1.2rem;
-  }
-  .news-card {
-    width: 45vw;
-    min-width: 220px;
-    max-width: 320px;
-  }
-  .features-grid {
-    gap: 1.2rem;
-  }
-  .feature-card {
-    width: 45vw;
-    min-width: 220px;
-    max-width: 320px;
-  }
