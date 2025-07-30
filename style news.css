@@ -317,14 +317,3 @@ body::before {
     min-width: 220px;
     max-width: 320px;
   }
-}
-
-@media (max-width: 900px) {
-  .news-card {
-    padding: 24px 8px;
-    font-size: 1rem;
-  }
-  .news-image {
-    max-width: 98vw;
-    height: auto;
-  }
